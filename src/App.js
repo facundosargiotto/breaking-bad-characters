@@ -1,24 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+// Views
+import NavBar from "./views/NavBar";
+import CharacterView from "./views/CharacterView";
+import AllCharacters from "./views/AllCharacters";
 
-function App() {
+// Chakra UI
+import { Box } from "@chakra-ui/react";
+
+// React-Router-Dom
+import { Routes, Route} from "react-router-dom";
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <Box maxHeight="100vh">
+        <NavBar />
+        <Routes>
+
+          <Route path="/" element={ <AllCharacters /> } />
+          <Route path="/:name" element={ <CharacterView /> } />
+
+        </Routes>
+      </Box>
   );
 }
 
