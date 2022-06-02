@@ -8,7 +8,7 @@ Breaking Bad Characters is a website where you can search for information about 
 
 - Fork the repo.
 - Clone the repo.
-- On the root of the project, run 'npm install' to install all dependencies that the project needs.
+- On the root of the project, run 'npm install' to install all dependencies the project needs.
 - Run 'npm start'. Now you can see the project deployed on local server: http://localhost:3000/
 
 ## Dependencies
